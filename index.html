@@ -420,11 +420,14 @@
 
 							$('#btn-reset-timeall').on('click',function(){
 								timeall = 0;
+								distancetotal_x = 0;
+								localStorage.removeItem('distance_total');
+								localStorage.removeItem('time_all');
 							});
 
-							$('#btn-reset-distance').on('click',function(){
-								distancetotal_x = 0;
-							});
+						//	$('#btn-reset-distance').on('click',function(){
+						//		distancetotal_x = 0;
+						//	});
 						
 							$('#btn-delall').on('click',function(){
 								localStorage.removeItem('timer_current');
