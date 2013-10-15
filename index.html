@@ -418,19 +418,21 @@
 							$('#mytime2').html(buildstring);
 							$('#timer').html(millisectotime(timeinterval));
 
-						/*	$('#btn-reset-timeall').on('click',function(){
+							$('#btn-reset').on('click',function(){
+								localStorage.removeItem('distance_total');
+								localStorage.removeItem('time_all');
+								$('#timeall').html(millisectime(timeall));
+								$('#timeall').html("");
+								$('#distancetotal_block3').html(distancetotal_x + ' m');
+								$('#distancetotal_block3').html("");
 								timeall = 0;
-							});
-
-							$('#btn-reset-distance').on('click',function(){
 								distancetotal_x = 0;
 							});
-						*/
+						
+						
 							$('#btn-delall').on('click',function(){
 								localStorage.removeItem('timer_current');
 								localStorage.removeItem('timer_history');
-								localStorage.removeItem('distance_total');
-								localStorage.removeItem('time_all');
 								timeinterval = 0;
 								$('#timer').html(millisectotime(timeinterval));
 								$('#mytime').html("");
@@ -443,14 +445,14 @@
 									timeall = 0;
 							});
 
-
+							/*
 							$('#btn-start-pause').on('click',function(){
-								/*if (btntoggle == 0)
+								if (btntoggle == 0)
 								{
 									$('#btn-start-pause').removeClass("btn-success");
 									$('#btn-start-pause').addClass("btn-inverse");
 									$('#btn-start-pause').html('Pause');
-								*/
+								
 
 									Map();
 									timeuse = 1;
@@ -459,7 +461,7 @@
 									end = 0;
 
 
-								/*}
+								}
 								/else
 								{
 									$('#btn-start-pause').removeClass("btn-inverse");
@@ -468,8 +470,9 @@
 									timeuse = 0;
 									btntoggle =0;
 								}
-								*/
-							});	
+								
+							});	*/
+							
 
 
 							$('#btn-stop').on('click',function(){	
@@ -653,7 +656,7 @@
 						<h1><center id="distancetotal_block3"></h1>
 
 						</center>						
-						<button type="button" id="btn-reset-timeall" class="btn-danger" style="width:50%;height:60px;margin:140% 0% 0% 0%">Reset</button>
+						<button type="button" id="btn-reset" class="btn-danger" style="width:50%;height:60px;margin:140% 0% 0% 0%">Reset</button>
 					<div data-role="footer" data-position="fixed" class="nav-glyphish-example">
 						<div data-role="navbar" class="nav-glyphish-example" data-grid="c">
 							<ul>
