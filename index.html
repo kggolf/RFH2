@@ -418,19 +418,19 @@
 							$('#mytime2').html(buildstring);
 							$('#timer').html(millisectotime(timeinterval));
 
-						/*	$('#btn-reset-timeall').on('click',function(){
+							$('#btn-reset-timeall').on('click',function(){
 								timeall = 0;
 							});
 
 							$('#btn-reset-distance').on('click',function(){
 								distancetotal_x = 0;
 							});
-						*/
+						
 							$('#btn-delall').on('click',function(){
 								localStorage.removeItem('timer_current');
 								localStorage.removeItem('timer_history');
-								localStorage.removeItem('distance_total');
-								localStorage.removeItem('time_all');
+							//	localStorage.removeItem('distance_total');
+							//	localStorage.removeItem('time_all');
 								timeinterval = 0;
 								$('#timer').html(millisectotime(timeinterval));
 								$('#mytime').html("");
@@ -439,8 +439,8 @@
 									dis_array.length = 0;
 									lap_arraytop.length = 0;
 									dis_arraytop.length = 0;
-									distancetotal_x = 0;
-									timeall = 0;
+								//	distancetotal_x = 0;
+									//timeall = 0;
 							});
 
 
